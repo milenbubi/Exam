@@ -35,13 +35,13 @@ namespace Exam.Tests
         [TearDown]
         public void EndOfTest()
         {
-            //if (TestContext.CurrentContext.Result.Outcome == ResultState.Failure)
+            if (TestContext.CurrentContext.Result.Outcome == ResultState.Failure)
             {
                 screenshot = ((ITakesScreenshot)driver).GetScreenshot();
                 screenshot.SaveAsFile(screenshotFolder + GetTestName() + ".png", ScreenshotImageFormat.Png);
             }
 
-            driver.Quit();
+            ChromeRepository.ShutDownDriver();
         }
 
         private string GetTestName()
