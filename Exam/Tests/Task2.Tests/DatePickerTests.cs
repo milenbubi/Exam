@@ -9,8 +9,8 @@ namespace Exam.Tests.Task2.Tests
     [TestFixture]
     class DatePickerTests : DefaultFixture
     {
-        [TestCaseSource(nameof(PossibleDateFormats))]
-        [Property("TaskTwo", 1)]
+        [TestCaseSource(nameof(ExpectedDateFormats))]
+        [Property("Task2", 1)]
         public void ChooseDate_ChangeFormatOption_VerifyDateValueIsCorrect(string[] expectedDateFormats)
         {
             //Arrange
@@ -18,7 +18,7 @@ namespace Exam.Tests.Task2.Tests
             DatePickerPage datepickerPage = PageFactory.Get<DatePickerPage>();
             CalendarPage calendarPage = PageFactory.Get<CalendarPage>();
 
-            demoQaMainPage.NavigateTo();
+            demoQaMainPage.Load();
             demoQaMainPage.OpenDatePickerSection();
 
             datepickerPage.OpenFormatDateSubSection();
@@ -26,13 +26,13 @@ namespace Exam.Tests.Task2.Tests
 
             //Act
             calendarPage.EnterDate();
-            IEnumerable<string> dateFormats = datepickerPage.GetDateFormatTexts();
+            IEnumerable<string> dateFormats = datepickerPage.GetDateFormats();
 
             //Assert
             CollectionAssert.AreEqual(expectedDateFormats, dateFormats);
         }
 
-        private static string[][] PossibleDateFormats()
+        private static string[][] ExpectedDateFormats()
         {
             return new string[][] {
                 new string[] {

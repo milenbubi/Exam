@@ -4,8 +4,8 @@ namespace Exam.Pages.DemoQaPage
 {
     public partial class DemoQaPage
     {
-        public IWebElement Tooltip => ElementBy("id", "menu-item-99");
+        public IWebElement TooltipSection => ElementBy("id", "menu-item-99");
 
-        public IWebElement Datepicker => ElementBy("id", "menu-item-146");
+        public IWebElement DatepickerSection => ElementBy("id", "menu-item-146");
     }
 }

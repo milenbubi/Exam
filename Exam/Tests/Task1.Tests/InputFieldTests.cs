@@ -9,14 +9,14 @@ namespace Exam.Tests.Task1.Tests
     class InputFieldTests : DefaultFixture
     {
         [Test]
-        [Property("TaskOne", 1)]
+        [Property("Task1", 1)]
         public void HoverInputField_VerifyToolTipTextIsCorrect()
         {
             //Arrange
             DemoQaPage demoQaMainPage = PageFactory.Get<DemoQaPage>();
             TooltipPage tooltipPage = PageFactory.Get<TooltipPage>();
 
-            demoQaMainPage.NavigateTo();
+            demoQaMainPage.Load();
             demoQaMainPage.OpenTooltipSection();
 
             string expectedTooltipText = "We ask for your age only for statistical purposes.";

@@ -18,7 +18,7 @@ namespace Exam.Pages.DatepickerPage
             DateInput.Click();
         }
 
-        public IEnumerable<string> GetDateFormatTexts()
+        public IEnumerable<string> GetDateFormats()
         {
             int optionsCount = FormatOptions.Options.Count;
 

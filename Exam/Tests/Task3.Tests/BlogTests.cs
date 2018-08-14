@@ -14,7 +14,7 @@ namespace Exam.Tests.Task3.Tests
         private string[] hTags = { "h2", "h3" };
 
         [TestCaseSource(nameof(blogNumbers))]
-        [Property("TaskThree", 1)]
+        [Property("Task3", 1)]
         public void OpenBlog_VerifyQuickNavigationTextsAreSameAsArticlesNames(int position)
         {
             //Arrange
@@ -22,7 +22,7 @@ namespace Exam.Tests.Task3.Tests
             BlogSectionPage blogSectionPage = PageFactory.Get<BlogSectionPage>();
             BlogPage blogPage = PageFactory.Get<BlogPage>();
 
-            mainPage.NavigateTo();
+            mainPage.Load();
             mainPage.OpenBlogSection();
             blogSectionPage.OpenBlog(position);
 

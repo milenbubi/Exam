@@ -8,12 +8,12 @@
 
         public void OpenTooltipSection()
         {
-            Tooltip.Click();
+            TooltipSection.Click();
         }
 
         public void OpenDatePickerSection()
         {
-            Datepicker.Click();
+            DatepickerSection.Click();
         }
     }
 }

@@ -19,14 +19,13 @@ namespace Exam.Pages
             this.url = url;
         }
 
-        public void DelayForSeconds(int seconds)
+        public void DelayForSeconds(double seconds)
         {
-            int miliSeconds = seconds * 1000;
+            int miliSeconds = (int)(seconds * 1000);
             Task.Delay(miliSeconds).Wait();
         }
 
-        //  Virtual ??
-        public virtual void NavigateTo(string innerPage = "")
+        public void Load(string innerPage = "")
         {
             driver.Url = url + "/" + innerPage;
         }
