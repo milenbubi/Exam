@@ -1,8 +1,8 @@
-﻿using Exam.Pages.AutomateThePlanetPage;
+﻿using System.Linq;
 using Exam.Utilities;
 using NUnit.Framework;
 using OpenQA.Selenium;
-using System.Linq;
+using Exam.Pages.AutomateThePlanetPage;
 
 namespace Exam.Tests.Task3.Tests
 {
@@ -13,14 +13,14 @@ namespace Exam.Tests.Task3.Tests
 
         private string[] hTags = { "h2", "h3" };
 
-        [TestCaseSource(nameof(blogNumbers))]
         [Property("Task3", 1)]
+        [TestCaseSource(nameof(blogNumbers))]
         public void OpenBlog_VerifyQuickNavigationTextsAreSameAsArticlesNames(int position)
         {
             //Arrange
+            BlogPage blogPage = PageFactory.Get<BlogPage>();
             ATPMainPage mainPage = PageFactory.Get<ATPMainPage>();
             BlogSectionPage blogSectionPage = PageFactory.Get<BlogSectionPage>();
-            BlogPage blogPage = PageFactory.Get<BlogPage>();
 
             mainPage.Load();
             mainPage.OpenBlogSection();

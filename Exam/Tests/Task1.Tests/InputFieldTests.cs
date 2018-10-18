@@ -1,7 +1,7 @@
-﻿using Exam.Pages.DemoQaPage;
-using Exam.Pages.TooltipPage;
-using Exam.Utilities;
+﻿using Exam.Utilities;
 using NUnit.Framework;
+using Exam.Pages.DemoQaPage;
+using Exam.Pages.TooltipPage;
 
 namespace Exam.Tests.Task1.Tests
 {

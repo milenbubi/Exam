@@ -1,10 +1,10 @@
+using System.IO;
 using Exam.Utilities;
 using NUnit.Framework;
-using NUnit.Framework.Interfaces;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using System.IO;
 using System.Reflection;
+using OpenQA.Selenium.Chrome;
+using NUnit.Framework.Interfaces;
 
 namespace Exam.Tests
 {

@@ -1,7 +1,7 @@
-﻿using Exam.Pages.DatepickerPage;
-using Exam.Pages.DemoQaPage;
-using Exam.Utilities;
+﻿using Exam.Utilities;
 using NUnit.Framework;
+using Exam.Pages.DemoQaPage;
+using Exam.Pages.DatepickerPage;
 using System.Collections.Generic;
 
 namespace Exam.Tests.Task2.Tests
@@ -9,14 +9,14 @@ namespace Exam.Tests.Task2.Tests
     [TestFixture]
     class DatePickerTests : DefaultFixture
     {
-        [TestCaseSource(nameof(ExpectedDateFormats))]
         [Property("Task2", 1)]
+        [TestCaseSource(nameof(ExpectedDateFormats))]
         public void ChooseDate_ChangeFormatOption_VerifyDateValueIsCorrect(string[] expectedDateFormats)
         {
             //Arrange
             DemoQaPage demoQaMainPage = PageFactory.Get<DemoQaPage>();
-            DatePickerPage datepickerPage = PageFactory.Get<DatePickerPage>();
             CalendarPage calendarPage = PageFactory.Get<CalendarPage>();
+            DatePickerPage datepickerPage = PageFactory.Get<DatePickerPage>();
 
             demoQaMainPage.Load();
             demoQaMainPage.OpenDatePickerSection();

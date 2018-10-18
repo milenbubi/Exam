@@ -1,8 +1,8 @@
-﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
+﻿using System;
 using System.IO;
+using OpenQA.Selenium;
 using System.Reflection;
-using System;
+using OpenQA.Selenium.Chrome;
 
 namespace Exam.Utilities
 {
@@ -28,10 +28,6 @@ namespace Exam.Utilities
                 {
                     return driver;
                 }
-            }
-            private set
-            {
-                driver = value;
             }
         }
 
