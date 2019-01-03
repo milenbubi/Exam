@@ -27,7 +27,7 @@ namespace Exam.Tests
         {
             ChromeOptions options = new ChromeOptions();
             options.AddArgument("--start-maximized");
-            // options.AddArgument("--headless");
+            options.AddArgument("--headless");
 
             driver = ChromeRepository.InitDriver(options);
         }

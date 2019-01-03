@@ -9,11 +9,6 @@ namespace Exam.Pages.AutomateThePlanetPage
 
         public IEnumerable<IWebElement> QuickNavigations => WaitForElementsBy("xpath", "//div[@class='tve_contents_table tve_clearfix']//a");
 
-        public IWebElement ElementWith(string articleID)
-        {
-            IWebElement articleName = driver.FindElement(By.Id(articleID));
-
-            return articleName;
-        }
+        public IWebElement ElementWith(string articleID)=> driver.FindElement(By.Id(articleID));
     }
 }
